@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Proposal ❤️</title>
+
+<style>
+body{
+    background: linear-gradient(to right,#ff4e50,#f9d423);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial;
+    overflow:hidden;
+}
+
+.box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.3);
+}
+
+h1{
+    color:#ff0055;
+}
+
+button{
+    padding:14px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    margin:10px;
+}
+
+#yes{
+    background:#28a745;
+    color:white;
+}
+
+#no{
+    background:#dc3545;
+    color:white;
+    position:absolute;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <button id="yes" onclick="yesClick()">YES</button>
+
+    <!-- mouse + touch dono ke liye -->
+    <button id="no" onmouseover="moveNo()" ontouchstart="moveNo()">NO</button>
+</div>
+
+<script>
+function yesClick(){
+    document.body.innerHTML =
+    "<h1 style='color:white;text-align:center;'>Yayyy! I Love You ❤️🥰</h1>";
+}
+
+function moveNo(){
+    var x = Math.random() * (window.innerWidth - 100);
+    var y = Math.random() * (window.innerHeight - 100);
+
+    var noBtn = document.getElementById("no");
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
